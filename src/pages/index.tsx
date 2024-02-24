@@ -1,26 +1,14 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import { Barlow } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const barlow = Barlow({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function Home() {
   return (
     <>
       {/* <!-- Navbar --> */}
-      <nav className="fixed top-0 left-0 right-0 flex items-center justify-between border-b bg-white py-8 px-8">
-        <div>
-            <img src="https://www.tomoro-coffee.com/img/icon7.2a9d4c28.png" alt="logo-tomoro" width="150"/>
-        </div>
-        <ul className="flex space-x-16">
-            <li className="font-barlow-bold text-lg font-thin hover:text-[#FF6A39]">Home</li>
-            <li className="font-barlow-bold text-lg font-thin hover:text-[#FF6A39]">About</li>
-            <li className="font-barlow-bold text-lg font-thin hover:text-[#FF6A39]">Download App</li>
-            <li className="font-barlow-bold text-lg font-thin hover:text-[#FF6A39]">Terms and Conditions</li>
-        </ul>
-        <div>
-            <h1 className="font-barlow-bold text-lg font-thin mr-16">ENGLISH</h1>
-        </div>
-    </nav>
+      <Navbar />
 
       {/* <!-- Body --> */}
       <div className="flex h-screen items-center justify-center">
@@ -34,30 +22,24 @@ export default function Home() {
               height="65"
               className="-left-44 -top-48"
             />
+            <h3 className="text-3xl font-bold">HEY</h3>
+            <h3 className="mb-6 text-3xl font-bold">ENJOY YOUR COFFEE TIME</h3>
+            <p className="">100% ARABICA COFFEE</p>
+            <p className="">FRESHLY ROASTED & BREWED</p>
+            <h3 className="mt-6 text-4xl font-bold">@TOMORO</h3>
           </div>
-          <h3 className="text-3xl font-bold">HEY</h3>
-          <h3 className="mb-6 text-3xl font-bold">ENJOY YOUR COFFEE TIME</h3>
-          <p className="">100% ARABICA COFFEE</p>
-          <p className="">FRESHLY ROASTED & BREWED</p>
-          <h3 className="mt-6 text-3xl font-bold">@TOMORO</h3>
         </div>
         {/* <!-- Image --> */}
-        <div>
+        <div className="mr-8">
           <img
             src="https://www.tomoro-coffee.com/img/icon1.10800737.png"
             alt="main-coffee"
           />
         </div>
-        <div></div>
       </div>
 
       {/* <!-- Footer --> */}
-      <footer className="bottom-0 flex items-center justify-center bg-[#F8F8F8] px-2 py-6">
-        <p>
-          ©️2022 TOMORO COFFEE. All rights reserved. Contact us
-          hitomoro@tomoro-coffee.com
-        </p>
-      </footer>
+      <Footer />
     </>
   );
 }
